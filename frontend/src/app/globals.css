@@ -3,6 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* COLOR PALETTE */
+  --primary: #6f040f;
+  --secondary: #2f5215;
+  --tertiary: #fccf55;
+  --highlight-1: #b24851;
+  --highight-2: #6c9e47;
+  --button: #0064e6;
 }
 
 @theme inline {
@@ -10,12 +18,19 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-highlight-1: var(--highlight-1);
+  --color-highlight-2: var(--highlight-2);
+  --color-button: var(--button);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f2f3f4;
+    --foreground: #231f17;
   }
 }
 
@@ -23,4 +38,25 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TYPOGRAPHY */
+.heading {
+  @apply text-[34px] font-bold;
+}
+
+.sub-heading {
+  @apply text-[24px] font-semibold;
+}
+
+.body-text {
+  @apply text-[16px];
+}
+
+.caption {
+  @apply text-[14px];
+}
+
+.button-text {
+  @apply text-[14px] font-semibold;
 }
